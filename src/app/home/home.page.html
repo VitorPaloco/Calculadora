@@ -1,0 +1,90 @@
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <h3 style="color: rgb(116, 113, 113)">{{memoria}}</h3>
+    <h1>{{resultado}}</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)= "redefinir()">C</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)= "operador('^')">^</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)= "porcentagem()">%</ion-button></ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)="operador('÷')">÷</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('9')">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)="operador('x')">x</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)="operador('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('3')">3</ion-button>
+        </ion-col>
+        
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)="operador('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button fill="clear" class="botao-laranja" (click)= "backspace()">⌫</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button fill="clear" (click)= "digito('.')">.</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="warning" class="igual" (click)="calcular()">=</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
